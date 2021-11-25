@@ -11,9 +11,8 @@ class axi_Environment #(
   `uvm_component_param_utils(axi_Environment#(WIDTH, SIZE))
 
   axi_m_Agent #(WIDTH, SIZE) agent_m;
-  //axi_s_Agent#(WIDTH,SIZE) agent_s;
   axi_scoreboard #(WIDTH, SIZE) scoreboard;
-
+  
 
   function new(string name = "axi_Environment", uvm_component parent);
     super.new(name, parent);
