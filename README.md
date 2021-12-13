@@ -53,8 +53,21 @@ Below we have shown how one can install Xilinx Vivado Webpack.
 5) For first time run, one need to install gcc,gnn compilers. 
 
 
-### PREREQUISTE
+## PREREQUISTE
 
+Before executing the program one must configure the settings of vivado. 
+
+1) We have to type "-L uvm" in the marked area. 
+
+![1](https://user-images.githubusercontent.com/89468502/145795314-a5dae749-bc8d-4f48-98cf-19876e283dda.png)
+
+2) Just like the first one, we have to type "-L uvm" in the marked area.
+
+![2](https://user-images.githubusercontent.com/89468502/145795342-c97461f6-3c38-4ae9-a423-ae2187d64d4f.png)
+
+3) For the last modification we have to type "-testplusarg UVM_TESTNAME=axi_Test -testplusarg UVM_VERBOSITY=UVM_LOW" in the marked area.
+
+![3](https://user-images.githubusercontent.com/89468502/145795363-a403a57e-791c-4ede-8497-cd0cb274bcf1.png)
 
 
 ## Authors
