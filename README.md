@@ -53,7 +53,7 @@ Below we have shown how one can install Xilinx Vivado Webpack.
 5) For first time run, one need to install gcc,gnn compilers. 
 
 
-### Executing program
+### PREREQUISTE
 
 
 
