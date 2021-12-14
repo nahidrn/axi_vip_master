@@ -34,6 +34,43 @@ Our folder structure is given below,
 └── README.md
 ```
 
+### Details
+
+In this section we have provided details information of our modules.
+
+1) axi_test: axi_test is the top level UVM component in the UVM testbench. This level instantiates the top level environment, configures the environment and 
+              applies stimulus by invoking UVM Sequences through the environment to the DUT.
+              
+2) axi_top: In axi_top we defined the clock, reset signals & their timeperiods. We also made connection with the DUT in this level. "axi_test" is initiated      thorugh this module.
+            
+3) tb_top: In this module we have defined our modules access paths. One might need to change this if they want to run it in their machine.
+
+4) my_interface: Interface module defines all the AXI protocol signals and their data types & sizes.
+ 
+5) axi_env: axi_env module encapsulates the scoreboard & the agent modules. Environment module maintains the connections between various ports. 
+
+6) axi_sb: axi_sb module is like a checker board. This module checks the data & compares them. Scoreboard recieves data from the sequence item & the monitor.
+ 
+7) my_seq_item: my_seq_item module initializes the input signals to drive the DUT. 
+ 
+8) axi_m_seq: axi_m_seq module generates various input sequences like write_sequence, read_sequence for the DUT using my_seq_item module
+ 
+9) my_sqncr: This module is like a gateaway between driver module & sequence item. 
+ 
+10) axi_m_drv: This module drives the DUT through the interface. They receive the datas from the "my_sqncr" module.
+ 
+11) axi_mon: This module just monitors all the datas from the interface. Then, it lists down all the informations & sends them to the scorboard.
+ 
+12) axi_m_agent: Agent module encapsulates three modules (sequencer, driver & monitor)
+ 
+
+### UVM Architecture
+
+Below, we have shown our UVM architecture.
+
+![architecture](https://user-images.githubusercontent.com/89468502/145974227-5c536386-ab83-4d9e-9d69-5a1b459623fa.png)
+
+
 ## Getting Started
 
 
